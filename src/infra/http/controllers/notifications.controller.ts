@@ -17,8 +17,8 @@ export class NotificationsController {
       recipientId,
     });
 
-    const raw = NotificationViewModel.toHTTP(notification);
-
-    return raw;
+    return {
+      notification: NotificationViewModel.toHTTP(notification),
+    };
   }
 }
