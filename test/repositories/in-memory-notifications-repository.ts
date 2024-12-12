@@ -1,3 +1,4 @@
+import { notContains } from 'class-validator';
 import { Notification } from 'src/application/entities/notification';
 import { NotiticationRepository } from 'src/application/repositories/notification-repository';
 
@@ -18,6 +19,12 @@ export class inMemoryNotificationRepository implements NotiticationRepository {
     }
 
     return notification;
+  }
+
+  async countManyByRecipientId(recipientId: string): Promise<number> {
+    return this.notifications.filter(
+      (notification) => notification.recipientId == recipientId,
+    ).length;
   }
 
   async save(notification: Notification): Promise<void> {
