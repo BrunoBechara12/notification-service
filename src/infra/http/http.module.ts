@@ -7,6 +7,7 @@ import { GetRecipientNotification } from 'src/application/use-cases/get-recipien
 import { ReadNotification } from 'src/application/use-cases/read-notification';
 import { UnreadNotification } from 'src/application/use-cases/unread-notification';
 import { CancelNotification } from 'src/application/use-cases/cancel-notification';
+import { GetNotification } from 'src/application/use-cases/get-notifications';
 
 @Module({
   imports: [DatabaseModule],
@@ -18,6 +19,7 @@ import { CancelNotification } from 'src/application/use-cases/cancel-notificatio
     GetRecipientNotification,
     ReadNotification,
     UnreadNotification,
+    GetNotification,
   ],
 })
 export class HttpModule {}

@@ -5,6 +5,10 @@ import { NotiticationRepository } from 'src/application/repositories/notificatio
 export class inMemoryNotificationRepository implements NotiticationRepository {
   public notifications: Notification[] = [];
 
+  async findMany(): Promise<Notification[]> {
+    return this.notifications;
+  }
+
   async create(notification: Notification) {
     this.notifications.push(notification);
   }
