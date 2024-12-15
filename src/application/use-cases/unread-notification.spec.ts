@@ -1,6 +1,5 @@
 import { makeNotification } from '../../../test/factories/notification-factory';
 import { inMemoryNotificationRepository } from '../../../test/repositories/in-memory-notifications-repository';
-import { ReadNotification } from './read-notification';
 import { UnreadNotification } from './unread-notification';
 
 describe('Unread notification', () => {

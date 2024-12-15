@@ -1,6 +1,5 @@
 import { makeNotification } from '../../../test/factories/notification-factory';
 import { inMemoryNotificationRepository } from '../../../test/repositories/in-memory-notifications-repository';
-import { Notification } from '../entities/notification';
 import { GetNotification } from './get-notifications';
 
 describe('Get notifications', () => {

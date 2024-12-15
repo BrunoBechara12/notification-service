@@ -1,8 +1,7 @@
-import { notContains } from 'class-validator';
 import { Notification } from 'src/application/entities/notification';
-import { NotiticationRepository } from 'src/application/repositories/notification-repository';
+import { NotificationRepository } from 'src/application/repositories/notification-repository';
 
-export class inMemoryNotificationRepository implements NotiticationRepository {
+export class inMemoryNotificationRepository implements NotificationRepository {
   public notifications: Notification[] = [];
 
   async findMany(): Promise<Notification[]> {

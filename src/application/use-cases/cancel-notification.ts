@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { NotiticationRepository } from '../repositories/notification-repository';
+import { NotificationRepository } from '../repositories/notification-repository';
 
 interface CancelNotificationRequest {
   notificationId: string;
@@ -9,7 +9,7 @@ type CancelNotificationResponse = void;
 
 @Injectable()
 export class CancelNotification {
-  constructor(private notificationRepository: NotiticationRepository) {}
+  constructor(private notificationRepository: NotificationRepository) {}
 
   async execute(
     request: CancelNotificationRequest,

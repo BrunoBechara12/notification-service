@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { NotiticationRepository } from '../repositories/notification-repository';
+import { NotificationRepository } from '../repositories/notification-repository';
 import { Notification } from '../entities/notification';
 
 interface GetNotificationsResponse {
@@ -8,7 +8,7 @@ interface GetNotificationsResponse {
 
 @Injectable()
 export class GetNotification {
-  constructor(private notificationRepository: NotiticationRepository) {}
+  constructor(private notificationRepository: NotificationRepository) {}
 
   async execute(): Promise<GetNotificationsResponse> {
     const notifications = await this.notificationRepository.findMany();

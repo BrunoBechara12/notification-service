@@ -1,12 +1,11 @@
 import { Notification } from 'src/application/entities/notification';
-import { NotiticationRepository } from 'src/application/repositories/notification-repository';
+import { NotificationRepository } from 'src/application/repositories/notification-repository';
 import { PrismaService } from '../prisma.service';
 import { Injectable } from '@nestjs/common';
 import { PrismaNotificationMapper } from '../mappers/prisma-notification-mapper';
-import { Prisma } from '@prisma/client';
 
 @Injectable()
-export class PrismaNotificationRepository implements NotiticationRepository {
+export class PrismaNotificationRepository implements NotificationRepository {
   constructor(private prismaService: PrismaService) {}
 
   async findMany(): Promise<Notification[]> {
